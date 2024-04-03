@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netrunner Click Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="liberation.png">
+</head>
+<body onload="onStart()">
+    <div id="head">
+        <img src="liberation.png" alt="sabia" id="sabia">
+        <h2>Netrunner Click Tracker</h2>
+        <img src="settings.png" alt="settings" onclick="showSettings()" id="settingsButton">
+    </div>
+    <div id="split">
+        <div id="corp">
+            <h3>Corp</h3>
+            <div class="piece">
+                <img src="Click.svg" alt="click">: <p id="corpClicks">X</p>
+                <button onclick="addClickC()">+</button>
+                <button onclick="removeClickC()">-</button>
+            </div>
+            <div class="piece">
+                <img src="Credit.svg" alt="credit">: <p id="corpCredits">X</p>
+                <button onclick="addCreditC()">+</button>
+                <button onclick="removeCreditC()">-</button>
+            </div>
+            <div id="otherC">
+                <p id="bp">Bad Publicity: X</p>
+                <button onclick="badpubA()">+</button>
+                <button onclick="badpubR()">-</button>
+            </div>
+        </div>
+        <div id="runner">
+            <h3>Runner</h3>
+            <div class="piece">
+                <img src="Click.svg" alt="click">: <p id="runnerClicks">X</p>
+                <button onclick="addClickR()">+</button>
+                <button onclick="removeClickR()">-</button>
+            </div>
+            <div class="piece">
+                <img src="Credit.svg" alt="credit">: <p id="runnerCredits">X</p>
+                <button onclick="addCreditR()">+</button>
+                <button onclick="removeCreditR()">-</button>
+            </div>
+            <div id="otherR">
+                <p id="tag">Tags: X</p>
+                <button onclick="tagA()">+</button>
+                <button onclick="tagR()">-</button>
+                <p id="core">Core Damage: X</p>
+                <button onclick="coreA()">+</button>
+                <button onclick="coreR()">-</button>    
+            </div>
+        </div>
+    </div>
+    <div id="global">
+        <p id="turns">Turns: X</p>
+        <button onclick="pass()">Pass</button>
+        <button onclick="reset()">Finish and Play Again</button>
+    </div>
+    
+    <div id="panel">
+        <div id="fade"></div>
+        <div id="settings">
+            <h3>Settings</h3>
+            <p>Working on it... (Faction themes and mark mechanic, maybe some layout preferences too)</p>
+            <p>Check out: <a href="https://github.com/Jeasiel/netrunnerclicktracker">Github Repo</a></p>
+            <button onclick="closeSettings()">Close</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
