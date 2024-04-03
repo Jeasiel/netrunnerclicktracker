@@ -21,20 +21,6 @@
   border-right: 1px rgb(0, 0, 0) solid;
 }
 
-@media only screen and (max-width: 680px) {
-  #split {
-    flex-direction: column;
-  }
-  #split > div {
-    width: 100%;
-    height: 50vh;
-  }
-  #split > #corp {
-    border-right: 0px;
-    border-top: 1px rgb(0, 0, 0) solid;
-    transform: rotate(180deg);
-  }
-}
 #settings {
   position: fixed;
   border-color: black;
@@ -49,6 +35,24 @@
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 680px) {
+  #split {
+    flex-direction: column;
+    height: 70vh;
+  }
+  #split > div {
+    width: 100%;
+    height: 50vh;
+  }
+  #split > #corp {
+    border-right: 0px;
+    border-top: 1px rgb(0, 0, 0) solid;
+    transform: rotate(180deg);
+  }
+  #settings {
+    width: 80%;
+  }
+}
 #fade {
   background-color: rgb(100, 100, 100);
   opacity: 30%;
@@ -73,16 +77,13 @@ body {
   display: none;
 }
 
-#otherR, #otherC {
+#otherR, #otherC, #ohterR2 {
   display: flex;
   align-items: center;
   margin: 0px 10px;
 }
-#otherR > button, #otherC > button {
+#otherR > button, #otherC > button, #ohterR2 > button {
   margin-left: 10px;
-}
-#otherR > #core, #otherC > #core {
-  margin-left: 20px;
 }
 
 #head {
