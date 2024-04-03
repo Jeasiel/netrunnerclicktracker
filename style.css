@@ -1,6 +1,6 @@
 @font-face {
   font-family: Ubuntu;
-  src: url("./Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+  src: url("../netrunnerclicktracker/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
 }
 #split {
   display: flex;
