@@ -2,6 +2,13 @@
   font-family: Ubuntu;
   src: url("../netrunnerclicktracker/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
 }
+button {
+  border: 1px solid #222;
+  border-radius: 3px;
+  width: fit-content;
+  height: auto;
+}
+
 #split {
   display: flex;
   justify-content: space-evenly;
@@ -23,6 +30,8 @@
 
 #settings {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   border-color: black;
   border-style: solid;
   top: 50%;
@@ -30,9 +39,21 @@
   transform: translate(-50%, -50%);
   width: 50%;
   height: 70%;
+  align-items: center;
   text-align: center;
   background-color: #f8f8ff;
   border-radius: 10px;
+}
+#settings > button {
+  margin-top: auto;
+  margin-bottom: 10px;
+  width: 12%;
+  height: 5%;
+  min-width: fit-content;
+  min-height: fit-content;
+  font-weight: bold;
+  border: 1px solid #000;
+  border-radius: 3px;
 }
 
 @media only screen and (max-width: 680px) {
@@ -51,6 +72,10 @@
   }
   #settings {
     width: 80%;
+  }
+  #settings > button {
+    width: 33%;
+    height: 5%;
   }
 }
 #fade {
