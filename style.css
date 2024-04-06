@@ -44,7 +44,7 @@ button {
   background-color: #f8f8ff;
   border-radius: 10px;
 }
-#settings > button {
+#settings > #closeSettings {
   margin-top: auto;
   margin-bottom: 10px;
   width: 12%;
@@ -73,7 +73,7 @@ button {
   #settings {
     width: 80%;
   }
-  #settings > button {
+  #settings > #closeSettings {
     width: 33%;
     height: 5%;
   }

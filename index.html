@@ -15,7 +15,7 @@
     </div>
     <div id="split">
         <div id="corp">
-            <h3>Corp</h3>
+            <h3 id="corpTitle">Corp's Turn</h3>
             <div class="piece">
                 <img src="Click.svg" alt="click">: <p id="corpClicks">X</p>
                 <button onclick="addClickC()">+</button>
@@ -33,7 +33,7 @@
             </div>
         </div>
         <div id="runner">
-            <h3>Runner</h3>
+            <h3 id="runnerTitle">Runner</h3>
             <div class="piece">
                 <img src="Click.svg" alt="click">: <p id="runnerClicks">X</p>
                 <button onclick="addClickR()">+</button>
@@ -66,10 +66,11 @@
         <div id="fade"></div>
         <div id="settings">
             <h3>Settings</h3>
-            <p>Working on it... (Faction themes and mark mechanic, maybe some layout preferences too)</p>
+            <p>Working on more settings... (Faction themes and mark mechanic, maybe some layout preferences too)</p>
             <p>Check out too: <a href="https://github.com/Jeasiel/netrunnerclicktracker">Github Repository</a></p>
             <p>This website works better in your phone!</p>
-            <button onclick="closeSettings()">Close</button>
+            <button id="toggleFullscreen" onclick="toggleFullscreen()">Toggle Fullscreen</button>
+            <button id="closeSettings" onclick="closeSettings()">Close</button>
         </div>
     </div>
     <script src="main.js"></script>

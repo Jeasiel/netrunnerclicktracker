@@ -6,7 +6,7 @@ var corpClicks = 3;
 var corpCredits = 5;
 var badPubli = 0;
 
-var runnerClicks = 4;
+var runnerClicks = 0;
 var runnerCredits = 5;
 var tags = 0;
 var core = 0;
@@ -31,6 +31,10 @@ function chooseFaction(){
 
 }
 
+function toggleFullscreen(){
+    document.documentElement.requestFullscreen();
+}
+
 //abre configurações
 function showSettings(){
     document.getElementById("panel").style.display = "contents";
@@ -39,8 +43,6 @@ function showSettings(){
 function closeSettings(){
     document.getElementById("panel").style.display = "none";
 }
-
-
 
 //--------------------------------------------------------
 
@@ -56,7 +58,7 @@ function removeClickC(){
         corpClicks--;
         document.getElementById("corpClicks").innerText = corpClicks;
     } else {
-        alert("You don't have any clicks.");
+        alert("The corp doesn't have any clicks.");
     }
 }
 
@@ -72,7 +74,7 @@ function removeCreditC(){
         corpCredits--;
         document.getElementById("corpCredits").innerText = corpCredits;
     } else {
-        alert("You don't have any credits.");
+        alert("The corp doesn't have any credits.");
     }
 }
 
@@ -88,7 +90,7 @@ function badpubR(){
         badPubli--;
         document.getElementById("bp").innerText = "Bad Publicity: " + badPubli;
     } else {
-        alert("You don't have any bad publicity! (Bad Publicity can't be less than 0, since it's a counter)");
+        alert("The corp doesn't have any bad publicity! (Bad Publicity can't be less than 0, since it's a counter)");
     }
 }
 
@@ -103,7 +105,7 @@ function removeClickR(){
         runnerClicks--;
         document.getElementById("runnerClicks").innerText = runnerClicks;
     } else {
-        alert("You don't have any clicks.");
+        alert("The runner doesn't have any clicks.");
     }
 }
 
@@ -117,7 +119,7 @@ function removeCreditR(){
         runnerCredits--;
         document.getElementById("runnerCredits").innerText = runnerCredits;
     } else {
-        alert("You don't have any credits.");
+        alert("The runner doesn't have any credits.");
     }
 }
 
@@ -133,7 +135,7 @@ function tagR(){
         tags--;
         document.getElementById("tag").innerText = "Tags: " + tags;
     } else {
-        alert("You don't have any tags.");
+        alert("The runner doesn't have any tags.");
     }
 }
 
@@ -149,7 +151,7 @@ function coreR(){
         core--;
         document.getElementById("core").innerText = "Core Damage: " + core;
     } else {
-        alert("You haven't taken any core damage yet.");
+        alert("The runner hasn't taken any core damage yet.");
     }
 }
 
@@ -168,13 +170,21 @@ function pass(){
     }
 
     if(!passed){
-        alert("You haven't used your clicks yet!");
+        if(turns % 2 == 0){
+            alert("The runner hasn't used their clicks yet!");    
+        } else {
+            alert("The corp hasn't used their clicks yet!");
+        }
     } else {
         turns++;
         document.getElementById("turns").innerText = "Turns: " + turns;
         if(turns % 2 == 0){
+            document.getElementById("runnerTitle").innerText = "Runner's Turn";
+            document.getElementById("corpTitle").innerText = "Corp";
             runnerClicks = 4;
         } else {
+            document.getElementById("corpTitle").innerText = "Corp's Turn";
+            document.getElementById("runnerTitle").innerText = "Runner";
             corpClicks = 3;
         }
         document.getElementById("corpClicks").innerText = corpClicks;
