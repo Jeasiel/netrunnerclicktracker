@@ -96,6 +96,7 @@ body {
   justify-content: space-evenly;
   flex-direction: column;
   background-color: #f8f8ff;
+  color: #202020;
 }
 
 #panel {
@@ -145,6 +146,13 @@ body {
 
 #global {
   margin: 0px 15px 15px 15px;
+}
+
+a:visited {
+  color: #202020;
+}
+a:link {
+  color: #202020;
 }
 
 /*# sourceMappingURL=style.css.map */
