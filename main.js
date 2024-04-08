@@ -31,7 +31,7 @@ function chooseFaction(){
 
 }
 
-function toggleFullscreen(){
+function goFullscreen(){
     document.documentElement.requestFullscreen();
 }
 

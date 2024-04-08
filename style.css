@@ -55,6 +55,10 @@ button {
   border: 1px solid #000;
   border-radius: 3px;
 }
+#settings > p {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
 
 @media only screen and (max-width: 680px) {
   #split {
@@ -143,9 +147,15 @@ body {
 .piece > p {
   margin-left: 3px;
 }
+.piece > .clickImage {
+  height: 2.5em;
+}
+.piece > .creditImage {
+  height: 1.8em;
+}
 
 #global {
-  margin: 0px 15px 15px 15px;
+  margin: auto 15px 15px 15px;
 }
 
 a:visited {
