@@ -44,13 +44,14 @@ button {
   background-color: #f8f8ff;
   border-radius: 10px;
 }
+#settings > button {
+  margin-top: 1em;
+  width: 23%;
+  height: 2em;
+}
 #settings > #closeSettings {
   margin-top: auto;
   margin-bottom: 10px;
-  width: 12%;
-  height: 5%;
-  min-width: fit-content;
-  min-height: fit-content;
   font-weight: bold;
   border: 1px solid #000;
   border-radius: 3px;
@@ -58,6 +59,24 @@ button {
 #settings > p {
   margin-left: 1vw;
   margin-right: 1vw;
+}
+
+#choose {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  border-color: black;
+  border-style: solid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 35vh;
+  background-color: #f8f8ff;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 680px) {
@@ -82,7 +101,7 @@ button {
     height: 5%;
   }
 }
-#fade {
+.fade {
   background-color: rgb(100, 100, 100);
   opacity: 30%;
   height: 100%;
@@ -100,10 +119,10 @@ body {
   justify-content: space-evenly;
   flex-direction: column;
   background-color: #f8f8ff;
-  color: #202020;
+  color: #101010;
 }
 
-#panel {
+.panel {
   display: none;
 }
 
@@ -155,14 +174,14 @@ body {
 }
 
 #global {
-  margin: auto 15px 15px 15px;
+  margin: 0px 15px 15px 15px;
 }
 
 a:visited {
-  color: #202020;
+  color: #101010;
 }
 a:link {
-  color: #202020;
+  color: #101010;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -62,15 +62,41 @@
         <button onclick="reset()">Finish and Play Again</button>
     </div>
     
-    <div id="panel">
-        <div id="fade"></div>
+    <div class="panel" id="settingsPanel">
+        <div class="fade"></div>
         <div id="settings">
             <h3>Settings</h3>
             <p>Working on more settings... (Faction themes and mark mechanic, maybe some layout preferences too)</p>
             <p>Check out too: <a href="https://github.com/Jeasiel/netrunnerclicktracker">Github Repository</a></p>
             <p>This website works better in your phone!</p>
-            <button id="goFullscreen" onclick="goFullscreen()">Go Fullscreen</button>
+            <button onclick="openChoose()">Choose Background</button>
+            <button onclick="goFullscreen()">Go Fullscreen</button>
             <button id="closeSettings" onclick="closeSettings()">Close</button>
+        </div>
+    </div>
+    <div class="panel" id="choosePanel">
+        <div class="fade"></div>
+        <div id="choose">
+            <label for="corpFaction">Choose Corp's background:</label>
+            <select name="corpFaction" id="corpFaction">
+                <option value="none">None (or Neutral)</option>
+                <option value="hb">Haas-Bioroid</option>
+                <option value="jinteki">Jinteki</option>
+                <option value="nbn">NBN</option>
+                <option value="weyland">Weyland Consortium</option>
+            </select>
+            <label for="runnerFaction">Choose Runner's background:</label>
+            <select name="runnerFaction" id="runnerFaction">
+                <option value="none">None (or Neutral)</option>
+                <option value="adam">Adam</option>
+                <option value="anarch">Anarch</option>
+                <option value="apex">Apex</option>
+                <option value="criminal">Criminal</option>
+                <option value="shaper">Shaper</option>
+                <option value="sunny">Sunny Lebeau</option>
+            </select>
+            <p>You may change later in the settings too!</p>
+            <button onclick="chooseFaction()">Done</button>
         </div>
     </div>
     <script src="main.js"></script>

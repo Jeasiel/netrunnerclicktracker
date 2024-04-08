@@ -24,11 +24,80 @@ document.getElementById("turns").innerText = "Turns: " + turns;
 
 //função ao iniciar (pode ser útil)
 function onStart(){
-
+    document.getElementById("choosePanel").style.display = "contents";
 }
 
+function openChoose(){
+    closeSettings();
+    document.getElementById("choosePanel").style.display = "contents";
+}
 function chooseFaction(){
+    const corp = document.getElementById("corpFaction");
+    switch (corp.value) {
+        case "none":
+            console.log("None selected (Corp)");
+            break;
+        case "hb":
+            console.log("Haas-Bioroid selected");
+            changeBackground("hb.png", true, "#afafaf");
+            break;
+        case "jinteki":
+            console.log("Jinteki selected");
+            changeBackground("jinteki.png", true, "#afafaf");
+            break;
+        case "nbn":
+            console.log("NBN selected");
+            changeBackground("nbn.png", true, "#afafaf");
+            break;
+        case "weyland":
+            console.log("Weyland Consortium selected");
+            changeBackground("weyland.png", true, "#afafaf");
+            break;    
+    }
+    const runner = document.getElementById("runnerFaction");
+    switch (runner.value){
+        case "none":
+            console.log("None selected (Runner)");
+            break;
+        case "adam":
+            console.log("Adam selected");
+            changeBackground("adam.png", false, "#afafaf");
+            break;
+        case "anarch":
+            console.log("Anarch selected");
+            changeBackground("anarch.png", false, "#afafaf");
+            break;
+        case "apex":
+            console.log("Apex selected");
+            changeBackground("apex.png", false, "#afafaf");
+            break;
+        case "criminal":
+            console.log("Criminal selected");
+            changeBackground("criminal.png", false, "#afafaf");
+            break;
+        case "shaper":
+            console.log("Shaper selected");
+            changeBackground("shaper.png", false, "#afafaf");
+            break;
+        case "sunny":
+            console.log("Sunny Lebeau selected");
+            changeBackground("sunny.png", false, "#afafaf");
+            break;
+    }
+    document.getElementById("choosePanel").style.display = "none";
+}
 
+function changeBackground(file, side, color){
+    //Side: true = Corp, false = Runner
+    if(side){
+        const corp = document.getElementById("corp");
+        corp.style.background = color + " url(backgrounds/" + file + ") right no-repeat";
+        corp.style.backgroundSize = "contain";
+    } else {
+        const runner = document.getElementById("runner");
+        runner.style.background = color + " url(backgrounds/" + file + ") right no-repeat";
+        runner.style.backgroundSize = "contain";
+    }
 }
 
 function goFullscreen(){
@@ -37,11 +106,11 @@ function goFullscreen(){
 
 //abre configurações
 function showSettings(){
-    document.getElementById("panel").style.display = "contents";
+    document.getElementById("settingsPanel").style.display = "contents";
 }
 
 function closeSettings(){
-    document.getElementById("panel").style.display = "none";
+    document.getElementById("settingsPanel").style.display = "none";
 }
 
 //--------------------------------------------------------
