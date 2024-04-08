@@ -93,10 +93,12 @@ function changeBackground(file, side, color){
         const corp = document.getElementById("corp");
         corp.style.background = color + " url(backgrounds/" + file + ") right no-repeat";
         corp.style.backgroundSize = "contain";
+        corp.style.backgroundPosition = "top";
     } else {
         const runner = document.getElementById("runner");
         runner.style.background = color + " url(backgrounds/" + file + ") right no-repeat";
         runner.style.backgroundSize = "contain";
+        runner.style.backgroundPosition = "top";
     }
 }
 
