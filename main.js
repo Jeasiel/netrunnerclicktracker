@@ -1,6 +1,3 @@
-//document.getElementById("corpClicks").innerText = 1;
-const maxWidth = window.matchMedia("(max-width: 500px)").matches; //uso: if(maxWidth){o que muda}
-
 var turns = 1;
 var corpClicks = 3;
 var corpCredits = 5;
@@ -36,55 +33,69 @@ function chooseFaction(){
     switch (corp.value) {
         case "none":
             console.log("None selected (Corp)");
+            resetBackground(true);
             break;
         case "hb":
             console.log("Haas-Bioroid selected");
-            changeBackground("hb.png", true, "#afafaf");
+            changeBackground("hb.png", true, "#CFBDDA");
             break;
         case "jinteki":
             console.log("Jinteki selected");
-            changeBackground("jinteki.png", true, "#afafaf");
+            changeBackground("jinteki.png", true, "#F8DED1");
             break;
         case "nbn":
             console.log("NBN selected");
-            changeBackground("nbn.png", true, "#afafaf");
+            changeBackground("nbn.png", true, "#FFF08B");
             break;
         case "weyland":
             console.log("Weyland Consortium selected");
-            changeBackground("weyland.png", true, "#afafaf");
+            changeBackground("weyland.png", true, "#9BB19B");
             break;    
     }
     const runner = document.getElementById("runnerFaction");
     switch (runner.value){
         case "none":
             console.log("None selected (Runner)");
+            resetBackground(false);
             break;
         case "adam":
             console.log("Adam selected");
-            changeBackground("adam.png", false, "#afafaf");
+            changeBackground("adam.png", false, "#E0D99A");
             break;
         case "anarch":
             console.log("Anarch selected");
-            changeBackground("anarch.png", false, "#afafaf");
+            changeBackground("anarch.png", false, "#F7E3C8");
             break;
         case "apex":
             console.log("Apex selected");
-            changeBackground("apex.png", false, "#afafaf");
+            changeBackground("apex.png", false, "#E77C6C");
             break;
         case "criminal":
             console.log("Criminal selected");
-            changeBackground("criminal.png", false, "#afafaf");
+            changeBackground("criminal.png", false, "#7DA7EA");
             break;
         case "shaper":
             console.log("Shaper selected");
-            changeBackground("shaper.png", false, "#afafaf");
+            changeBackground("shaper.png", false, "#8CCF89");
             break;
         case "sunny":
             console.log("Sunny Lebeau selected");
-            changeBackground("sunny.png", false, "#afafaf");
+            changeBackground("sunny.png", false, "#CFCFD0");
             break;
     }
     document.getElementById("choosePanel").style.display = "none";
+}
+
+function resetBackground(side){
+    if(side){
+        const corp = document.getElementById("corp");
+        corp.style.backgroundColor = "#afafaf";
+        corp.style.backgroundImage = "none";
+    } else {
+        const runner = document.getElementById("runner");
+        runner.style.backgroundColor = "#afafaf";
+        runner.style.backgroundImage = "none";
+    }
 }
 
 function changeBackground(file, side, color){

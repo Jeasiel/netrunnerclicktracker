@@ -3,11 +3,14 @@
     font-family: Ubuntu
     src: url("../netrunnerclicktracker/Ubuntu/Ubuntu-Regular.ttf") format("truetype")
 
+div
+    min-height: fit-content
+
 button
     border: 1px solid #222
     border-radius: 3px
     width: fit-content
-    height: auto
+    height: fit-content
 
 #split
     display: flex
@@ -23,8 +26,14 @@ button
             >
                 h3
                     margin: 10px 10px
+                div
+                    >
+                        button
+                            width: 3em
         #corp
             border-right: 1px rgb(0, 0, 0) solid
+    &:fullscreen
+        height: 85vh
 
 #settings
     position: fixed
@@ -43,10 +52,11 @@ button
     border-radius: 10px
     >
         button
-            margin-top: 1em
-            width: 23%
+            margin-top: 0.5em
+            width: 20%
+            min-height: fit-content
             height: 2em
-
+            margin-bottom: 0.5em
         #closeSettings
             margin-top: auto
             margin-bottom: 10px
@@ -67,7 +77,7 @@ button
     left: 50%
     transform: translate(-50%, -50%)
     width: 50vw
-    height: 35vh
+    height: 50vh
     background-color: #f8f8ff
     align-items: center
     text-align: center
@@ -90,13 +100,13 @@ button
         width: 80%
         >
             button
-                width: 33%
+                width: 40%
                 height: fit-content
             #closeSettings
                 width: 33%
                 height: 5%
     #choose
-        width: 80vw
+        width: 90vw
 
 .fade
     background-color: rgb(100, 100, 100)
@@ -110,13 +120,13 @@ body
     margin: 0
     padding: 0
     font-family: Ubuntu
+    height: 100vh
     display: flex
     align-content: space-around
     justify-content: space-evenly
     flex-direction: column
     background-color: #f8f8ff
     color: #101010
-            
 .panel
     display: none
 
@@ -160,7 +170,11 @@ body
             height: 1.8em
 
 #global
-    margin: 0px 15px 15px 15px
+    width: 100vw
+    >
+        div
+            margin-left: 10px
+            margin-bottom: 5px
 
 a
     &:visited
