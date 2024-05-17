@@ -9,8 +9,9 @@ div {
 button {
   border: 1px solid #222;
   border-radius: 3px;
-  width: fit-content;
-  height: fit-content;
+  min-width: fit-content;
+  min-height: fit-content;
+  width: 3em;
 }
 
 #split {
@@ -27,9 +28,6 @@ button {
 }
 #split > div > h3 {
   margin: 10px 10px;
-}
-#split > div > div > button {
-  width: 3em;
 }
 #split > #corp {
   border-right: 1px rgb(0, 0, 0) solid;
@@ -93,7 +91,32 @@ button {
   justify-content: space-evenly;
 }
 
+#global {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#global > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+#global > div > button {
+  width: 20vw;
+  height: 2em;
+}
+
 @media only screen and (max-width: 680px) {
+  button {
+    min-width: fit-content;
+    min-height: fit-content;
+    max-width: 40vw;
+    width: 40vw;
+    height: 2.5em;
+  }
   #split {
     flex-direction: column;
     height: 70vh;
@@ -101,6 +124,9 @@ button {
   #split > div {
     width: 100%;
     height: 50vh;
+  }
+  #split > div > div > button {
+    width: 20vw;
   }
   #split > #corp {
     border-right: 0px;
@@ -111,8 +137,7 @@ button {
     width: 80%;
   }
   #settings > button {
-    width: 40%;
-    height: fit-content;
+    width: 70vw;
   }
   #settings > #closeSettings {
     width: 33%;
@@ -194,14 +219,6 @@ body {
 }
 .piece > .creditImage {
   height: 1.8em;
-}
-
-#global {
-  width: 100vw;
-}
-#global > div {
-  margin-left: 10px;
-  margin-bottom: 5px;
 }
 
 a:visited {
